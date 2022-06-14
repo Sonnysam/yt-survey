@@ -27,6 +27,8 @@ function App() {
           console.log(error.text);
         }
       );
+
+      e.target.reset();
   };
 
 
@@ -50,19 +52,27 @@ function App() {
       <Form ref={form} onSubmit={sendMsg} className="mt-5">
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Name</Form.Label>
-          <Form.Control type="text" placeholder="John Doe" />
+          <Form.Control type="text" placeholder="John Doe" name="user_name" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="name@example.com" />
+          <Form.Control
+            type="email"
+            placeholder="name@example.com"
+            name="user_email"
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Address</Form.Label>
-          <Form.Control type="text" placeholder="Ghana, Accra" />
+          <Form.Control
+            type="text"
+            placeholder="Ghana, Accra"
+            name="user_address"
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
           <Form.Label>Review about Channel</Form.Label>
-          <Form.Control as="textarea" rows={3} />
+          <Form.Control as="textarea" rows={3} name="user_msg" className="fs-1" />
         </Form.Group>
         {/* Button Section */}
         <div className="d-grid gap-2">
@@ -70,7 +80,7 @@ function App() {
             type="submit"
             variant="outline-primary"
             size="lg"
-            className="py-5"
+            className="py-2 fs-2"
           >
             Submit
           </Button>

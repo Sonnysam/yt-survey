@@ -9,7 +9,8 @@
     "react": "^18.1.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.1.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "react-simple-typewriter": "^3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
