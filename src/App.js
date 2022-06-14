@@ -3,11 +3,32 @@ import "./App.css";
 import { Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import logo from "./logo.png";
+import emailjs from "@emailjs/browser";
+
 
 function App() {
   const form = useRef();
   
-  const sendMsg = () => {};
+  const sendMsg = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_hmxk7y8",
+        "template_j6vewro",
+        form.current,
+        "VtWPjDfzCqDzP1bY3"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
 
   return (
     <div className="container py-5">
